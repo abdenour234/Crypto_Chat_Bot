@@ -267,7 +267,7 @@ if "messages" not in st.session_state:
     st.session_state["messages"]=[]
 st.title("Crypto Currency Chatbot Assistant")
 user_input=st.text_input("What's on your mind")
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = open('api_openai_key','r').read()
 client=OpenAI()
 if user_input is not None:
     try:
